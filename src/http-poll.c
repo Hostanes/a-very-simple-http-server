@@ -7,7 +7,7 @@
   and returns a single default http response, then closes.
 */
 
-// #include "t-vector.h"
+#include "t-vector.h"
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <poll.h>
@@ -58,7 +58,7 @@ int main() {
     return -1;
   }
 
-  // struct dynArray_t *clients = create_Array(2);
+  struct dynArray_t *clients = create_Array(2);
 
   if (listen(sockfd, 1) == -1) {
     perror("Listen failed");
